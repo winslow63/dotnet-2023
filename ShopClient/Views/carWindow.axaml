@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ShopClient.Views.carWindow"
+        xmlns:vm="using:ShopClient.ViewModels"
+        Title="car"
+        MaxWidth="500"
+		    SizeToContent="Height"
+        >
+
+  <Design.DataContext>
+    <vm:CarViewModel/>
+  </Design.DataContext>
+
+  <Window.Styles>
+    <StyleInclude Source="/Styles.axaml"/>
+  </Window.Styles>
+
+  <Grid Classes="MainGrid" RowDefinitions="Auto, Auto, Auto, *" ColumnDefinitions="Auto, *">
+
+    <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">car Number</Label>
+    <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding carNumber}"/>
+    <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">model</Label>
+    <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding model}"/>
+    <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">typeId</Label>
+    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding typeId}"/>
+
+
+    <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+					HorizontalAlignment="Right"
+					 Orientation="Horizontal">
+      <Button IsDefault="True" Command="{Binding OnSubmitCarCommand}" >Ok</Button>
+      <Button IsCancel="True" Click="CancelButton_OnClick">Отмена</Button>
+    </StackPanel>
+    
+  </Grid>
+</Window>

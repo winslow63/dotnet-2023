@@ -1,0 +1,121 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ShopClient.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ShopClient.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ShopClient">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+  <Window.Styles>
+    <StyleInclude Source="/Styles.axaml"/>
+  </Window.Styles>
+
+  <TabControl>
+    <TabItem Header="order" VerticalContentAlignment="Center">
+      <Grid Classes="MainGrid" RowDefinitions="Auto, *">
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnAddCommandShop}">
+            <Image Source="/Assets/add.png"/>
+          </Button>
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnChangeCommandShop}">
+            <Image Source="/Assets/settings.png"/>
+          </Button>
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnDeleteCommandShop}">
+            <Image Source="/Assets/remove.png"/>
+          </Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Shop}" SelectedItem="{Binding SelectedShop}">
+
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="order number" Binding="{Binding orderNumber}"/>
+            <DataGridTextColumn Header=" date time order" Binding="{Binding DateTimeOrder}"/>
+            <DataGridTextColumn Header="date time delivery" Binding="{Binding DateTimeDelivery}"/>
+            <DataGridTextColumn Header="date time delivery actuals" Binding="{Binding status}" />
+            <DataGridTextColumn Header="status" />
+          </DataGrid.Columns>
+        </DataGrid>
+      </Grid>
+    </TabItem>
+    <TabItem Header="client" VerticalContentAlignment="Center">
+      <Grid Classes="MainGrid" RowDefinitions="Auto, *">
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnAddCommandClient}">
+            <Image Source="/Assets/add.png"/>
+          </Button>
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnChangeCommandClient}" >
+            <Image Source="/Assets/settings.png"/>
+          </Button>
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnDeleteCommandClient}">
+            <Image Source="/Assets/remove.png"/>
+          </Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Client}" SelectedItem="{Binding SelectedClient}">
+
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="FIO" Binding="{Binding FIO}"/>
+            <DataGridTextColumn Header="address" Binding="{Binding address}"/>
+            <DataGridTextColumn Header="phone_number" Binding="{Binding phoneNumber}"/>
+          </DataGrid.Columns>
+        </DataGrid>
+      </Grid>
+    </TabItem>
+
+    <TabItem Header="courier" VerticalContentAlignment="Center">
+      <Grid Classes="MainGrid" RowDefinitions="Auto, *">
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnAddCommandCourier}">
+            <Image Source="/Assets/add.png"/>
+          </Button>
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnChangeCommandCourier}">
+            <Image Source="/Assets/settings.png"/>
+          </Button>
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnDeleteCommandCourier}">
+            <Image Source="/Assets/remove.png"/>
+          </Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Courier}" SelectedItem="{Binding SelectedCourier}">
+
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="FIO" Binding="{Binding FIO}"/>
+            <DataGridTextColumn Header="telephone" Binding="{Binding telephone}" />
+            <DataGridTextColumn Header="carId" Binding="{Binding carId}" />
+          </DataGrid.Columns>
+        </DataGrid>
+      </Grid>
+    </TabItem>
+
+    <TabItem Header="car" VerticalContentAlignment="Center">
+      <Grid Classes="MainGrid" RowDefinitions="Auto, *">
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnAddCommandCar}">
+            <Image Source="/Assets/add.png"/>
+          </Button>
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnChangeCommandCar}">
+            <Image Source="/Assets/settings.png"/>
+          </Button>
+          <Button Height="32" Width="32" Classes="ToolButton" Command="{Binding OnDeleteCommandCar}">
+            <Image Source="/Assets/remove.png"/>
+          </Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Car}" SelectedItem="{Binding SelectedCar}">
+
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="car_number" Binding="{Binding carNamber}"/>
+            <DataGridTextColumn Header="model"  Binding="{Binding model}"/>
+            <DataGridTextColumn Header="typeId"  Binding="{Binding typeId}" />
+          </DataGrid.Columns>
+        </DataGrid>
+      </Grid>
+    </TabItem>
+    
+  </TabControl>
+
+
+</Window>
