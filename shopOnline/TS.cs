@@ -3,16 +3,16 @@
 public class TS
 {
     public int Id { get; set; }
-    public int car_number { get; set; }
-    public string model { get; set; } = string.Empty;
-    public int typeId { get; set; }
+    public int CarNumber { get; set; }
+    public string Model { get; set; } = string.Empty;
+    public int TypeId { get; set; }
     public TS() { }
-    public TS(int id, int car_number, string model, int type)
+    public TS(int id, int carNumber, string model, int type)
     {
         Id = id;
-        this.car_number = car_number;
-        this.model = model;
-        this.typeId = type;
+        this.CarNumber = carNumber;
+        this.Model = model;
+        this.TypeId = type;
     }
     public override bool Equals(object? obj)
     {
@@ -20,9 +20,9 @@ public class TS
             return false;
 
         return Id == param.Id &&
-               car_number == param.car_number &&
-               model == param.model &&
-               typeId == param.typeId;
+               CarNumber == param.CarNumber &&
+               Model == param.Model &&
+               TypeId == param.TypeId;
     }
     public override int GetHashCode()
     {

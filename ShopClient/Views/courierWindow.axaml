@@ -3,7 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="ShopClient.Views.courierWindow"
+        x:Class="ShopClient.Views.CourierWindow"
         Title="courier"
         xmlns:vm="using:ShopClient.ViewModels"
         MaxWidth="500"
@@ -22,9 +22,9 @@
     <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">FIO</Label>
     <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding FIO}"/>
     <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">telephone</Label>
-    <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding telephone}"/>
+    <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Telephone}"/>
     <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">carId</Label>
-    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding carId}"/>
+    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CarId}"/>
 
 
     <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"

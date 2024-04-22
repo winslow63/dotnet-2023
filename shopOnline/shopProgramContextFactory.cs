@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace shopOnline;
 
-public class shopProgramContextFactory : IDesignTimeDbContextFactory<shopProgramDbContext>
+public class ShopProgramContextFactory : IDesignTimeDbContextFactory<ShopProgramDbContext>
 {
-    public shopProgramDbContext CreateDbContext(string[] args)
+    public ShopProgramDbContext CreateDbContext(string[] args)
     {
-        var optionsBuilder = new DbContextOptionsBuilder<shopProgramDbContext>();
+        var optionsBuilder = new DbContextOptionsBuilder<ShopProgramDbContext>();
         optionsBuilder.UseMySQL("Server=127.0.0.1; Uid=root; password=1234; Database=shopProgram");
-        return new shopProgramDbContext(optionsBuilder.Options);
+        return new ShopProgramDbContext(optionsBuilder.Options);
 
     }
 

@@ -1,10 +1,10 @@
 ﻿namespace server.Dto;
 
-public class courierGetDto
+public class CourierGetDto
 {
     public int Id { get; set; }
     public string FIO { get; set; } = string.Empty;
-    public string telephone { get; set; } = string.Empty;
-    public int carId { get; set; }
+    public string Telephone { get; set; } = string.Empty;
+    public int CarId { get; set; }
 }
 

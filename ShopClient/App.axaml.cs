@@ -7,7 +7,6 @@ using ShopClient.Views;
 using Splat;
 
 namespace ShopClient;
-
 public partial class App : Application
 {
     public override void Initialize()

@@ -3,7 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="650"
-        x:Class="ShopClient.Views.shopWindow"
+        x:Class="ShopClient.Views.ShopWindow"
         Title="shop"
         MaxWidth="500"
         xmlns:vm="using:ShopClient.ViewModels"
@@ -21,27 +21,27 @@
   <Grid Classes="MainGrid" RowDefinitions="Auto, Auto, Auto,Auto,Auto,Auto,Auto,Auto,  *" ColumnDefinitions="Auto, *">
 
     <Label Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">courierId</Label>
-    <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding courierId}"/>
+    <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CourierId}"/>
     <Label Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">clientId</Label>
-    <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding clientId}"/>
+    <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ClientId}"/>
     <Label Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">date time order</Label>
-    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding dateTimeOrder}"/>
+    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding DateTimeOrder}"/>
     <Label Grid.Row="3" Grid.Column="0" VerticalAlignment="Center">date time delivery</Label>
-    <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding dateTimeDelivery}"/>
+    <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding DateTimeDelivery}"/>
     <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Center">date time delivery actual</Label>
-    <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding dateTimeDeliveryActual}"/>
+    <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding DateTimeDeliveryActual}"/>
     <Label Grid.Row="5" Grid.Column="0" VerticalAlignment="Center">order number</Label>
-    <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding orderNumber}"/>
+    <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding OrderNumber}"/>
     <Label Grid.Row="6" Grid.Column="0" VerticalAlignment="Center">status</Label>
-    <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding status}"/>
+    <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Status}"/>
     <Label Grid.Row="7" Grid.Column="0" VerticalAlignment="Center">typeId</Label>
-    <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding typeId}"/>
+    <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding TypeId}"/>
 
 
     <StackPanel Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"
 					HorizontalAlignment="Right"
 					 Orientation="Horizontal">
-      <Button IsDefault="True" Command="{Binding OnSubmitShopCommand}>Ok</Button>
+      <Button IsDefault="True">Ok</Button>
       <Button IsCancel="True" Click="CancelButton_OnClick">Отмена</Button>
     </StackPanel>
 

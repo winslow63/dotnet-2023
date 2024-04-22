@@ -1,6 +1,11 @@
 ﻿using ReactiveUI;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Reactive;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ShopClient.ViewModels;
 public class СlientViewModel : ViewModelBase
@@ -12,17 +17,17 @@ public class СlientViewModel : ViewModelBase
         set => this.RaiseAndSetIfChanged(ref _id, value);
     }
 
-    private string _FIO = string.Empty;
+    private string _fio = string.Empty;
     [Required]
     public string FIO
     {
-        get => _FIO;
-        set => this.RaiseAndSetIfChanged(ref _FIO, value);
+        get => _fio;
+        set => this.RaiseAndSetIfChanged(ref _fio, value);
     }
 
     private string _address = string.Empty;
     [Required]
-    public string address
+    public string Address
     {
         get => _address;
         set => this.RaiseAndSetIfChanged(ref _address, value);
@@ -30,7 +35,7 @@ public class СlientViewModel : ViewModelBase
 
     private string _phoneNumber = string.Empty;
     [Required]
-    public string phoneNumber
+    public string PhoneNumber
     {
         get => _phoneNumber;
         set => this.RaiseAndSetIfChanged(ref _phoneNumber, value);
@@ -42,4 +47,3 @@ public class СlientViewModel : ViewModelBase
         OnSubmitClientCommand = ReactiveCommand.Create(() => this);
     }
 }
-

@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContextFactory<shopProgramDbContext>(options =>
+builder.Services.AddDbContextFactory<ShopProgramDbContext>(options =>
 {
     options.UseMySQL(builder.Configuration.GetConnectionString("shopProgram")!);
 });

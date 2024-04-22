@@ -9,9 +9,9 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="ShopClient">
 
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
 
   <Window.Styles>
     <StyleInclude Source="/Styles.axaml"/>
@@ -31,13 +31,13 @@
             <Image Source="/Assets/remove.png"/>
           </Button>
         </StackPanel>
-        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Shop}" SelectedItem="{Binding SelectedShop}">
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Shops}" SelectedItem="{Binding SelectedShop}">
 
           <DataGrid.Columns>
-            <DataGridTextColumn Header="order number" Binding="{Binding orderNumber}"/>
+            <DataGridTextColumn Header="order number" Binding="{Binding OrderNumber}"/>
             <DataGridTextColumn Header=" date time order" Binding="{Binding DateTimeOrder}"/>
             <DataGridTextColumn Header="date time delivery" Binding="{Binding DateTimeDelivery}"/>
-            <DataGridTextColumn Header="date time delivery actuals" Binding="{Binding status}" />
+            <DataGridTextColumn Header="date time delivery actuals" Binding="{Binding Status}" />
             <DataGridTextColumn Header="status" />
           </DataGrid.Columns>
         </DataGrid>
@@ -56,12 +56,12 @@
             <Image Source="/Assets/remove.png"/>
           </Button>
         </StackPanel>
-        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Client}" SelectedItem="{Binding SelectedClient}">
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Clients}" SelectedItem="{Binding SelectedClient}">
 
           <DataGrid.Columns>
             <DataGridTextColumn Header="FIO" Binding="{Binding FIO}"/>
-            <DataGridTextColumn Header="address" Binding="{Binding address}"/>
-            <DataGridTextColumn Header="phone_number" Binding="{Binding phoneNumber}"/>
+            <DataGridTextColumn Header="address" Binding="{Binding Address}"/>
+            <DataGridTextColumn Header="phone_number" Binding="{Binding PhoneNumber}"/>
           </DataGrid.Columns>
         </DataGrid>
       </Grid>
@@ -80,12 +80,12 @@
             <Image Source="/Assets/remove.png"/>
           </Button>
         </StackPanel>
-        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Courier}" SelectedItem="{Binding SelectedCourier}">
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Couriers}" SelectedItem="{Binding SelectedCourier}">
 
           <DataGrid.Columns>
             <DataGridTextColumn Header="FIO" Binding="{Binding FIO}"/>
-            <DataGridTextColumn Header="telephone" Binding="{Binding telephone}" />
-            <DataGridTextColumn Header="carId" Binding="{Binding carId}" />
+            <DataGridTextColumn Header="telephone" Binding="{Binding Telephone}" />
+            <DataGridTextColumn Header="carId" Binding="{Binding CarId}" />
           </DataGrid.Columns>
         </DataGrid>
       </Grid>
@@ -104,17 +104,17 @@
             <Image Source="/Assets/remove.png"/>
           </Button>
         </StackPanel>
-        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Car}" SelectedItem="{Binding SelectedCar}">
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Cars}" SelectedItem="{Binding SelectedCar}">
 
           <DataGrid.Columns>
-            <DataGridTextColumn Header="car_number" Binding="{Binding carNamber}"/>
-            <DataGridTextColumn Header="model"  Binding="{Binding model}"/>
-            <DataGridTextColumn Header="typeId"  Binding="{Binding typeId}" />
+            <DataGridTextColumn Header="car_number" Binding="{Binding CarNamber}"/>
+            <DataGridTextColumn Header="model"  Binding="{Binding Model}"/>
+            <DataGridTextColumn Header="typeId"  Binding="{Binding TypeId}" />
           </DataGrid.Columns>
         </DataGrid>
       </Grid>
     </TabItem>
-    
+
   </TabControl>
 
 

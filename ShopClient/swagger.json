@@ -28,7 +28,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/shopGetDto"
+                    "$ref": "#/components/schemas/ShopGetDto"
                   }
                 }
               },
@@ -36,7 +36,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/shopGetDto"
+                    "$ref": "#/components/schemas/ShopGetDto"
                   }
                 }
               },
@@ -44,7 +44,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/shopGetDto"
+                    "$ref": "#/components/schemas/ShopGetDto"
                   }
                 }
               }
@@ -66,7 +66,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/shopGetDto"
+                    "$ref": "#/components/schemas/ShopGetDto"
                   }
                 }
               },
@@ -74,7 +74,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/shopGetDto"
+                    "$ref": "#/components/schemas/ShopGetDto"
                   }
                 }
               },
@@ -82,7 +82,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/shopGetDto"
+                    "$ref": "#/components/schemas/ShopGetDto"
                   }
                 }
               }
@@ -253,10 +253,10 @@
         }
       }
     },
-    "/api/clients": {
+    "/api/Clients": {
       "get": {
         "tags": [
-          "clients"
+          "Clients"
         ],
         "responses": {
           "200": {
@@ -266,7 +266,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/clientGetDto"
+                    "$ref": "#/components/schemas/ClientGetDto"
                   }
                 }
               },
@@ -274,7 +274,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/clientGetDto"
+                    "$ref": "#/components/schemas/ClientGetDto"
                   }
                 }
               },
@@ -282,7 +282,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/clientGetDto"
+                    "$ref": "#/components/schemas/ClientGetDto"
                   }
                 }
               }
@@ -292,23 +292,23 @@
       },
       "post": {
         "tags": [
-          "clients"
+          "Clients"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/clientPostDto"
+                "$ref": "#/components/schemas/ClientPostDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/clientPostDto"
+                "$ref": "#/components/schemas/ClientPostDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/clientPostDto"
+                "$ref": "#/components/schemas/ClientPostDto"
               }
             }
           }
@@ -319,17 +319,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/clientGetDto"
+                  "$ref": "#/components/schemas/ClientGetDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/clientGetDto"
+                  "$ref": "#/components/schemas/ClientGetDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/clientGetDto"
+                  "$ref": "#/components/schemas/ClientGetDto"
                 }
               }
             }
@@ -337,10 +337,10 @@
         }
       }
     },
-    "/api/clients/{id}": {
+    "/api/Clients/{id}": {
       "get": {
         "tags": [
-          "clients"
+          "Clients"
         ],
         "parameters": [
           {
@@ -359,17 +359,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/clientGetDto"
+                  "$ref": "#/components/schemas/ClientGetDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/clientGetDto"
+                  "$ref": "#/components/schemas/ClientGetDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/clientGetDto"
+                  "$ref": "#/components/schemas/ClientGetDto"
                 }
               }
             }
@@ -378,7 +378,7 @@
       },
       "put": {
         "tags": [
-          "clients"
+          "Clients"
         ],
         "parameters": [
           {
@@ -395,17 +395,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/clientPostDto"
+                "$ref": "#/components/schemas/ClientPostDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/clientPostDto"
+                "$ref": "#/components/schemas/ClientPostDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/clientPostDto"
+                "$ref": "#/components/schemas/ClientPostDto"
               }
             }
           }
@@ -418,7 +418,7 @@
       },
       "delete": {
         "tags": [
-          "clients"
+          "Clients"
         ],
         "parameters": [
           {
@@ -438,10 +438,10 @@
         }
       }
     },
-    "/api/couriers": {
+    "/api/Couriers": {
       "get": {
         "tags": [
-          "couriers"
+          "Couriers"
         ],
         "responses": {
           "200": {
@@ -451,7 +451,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/courierGetDto"
+                    "$ref": "#/components/schemas/CourierGetDto"
                   }
                 }
               },
@@ -459,7 +459,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/courierGetDto"
+                    "$ref": "#/components/schemas/CourierGetDto"
                   }
                 }
               },
@@ -467,7 +467,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/courierGetDto"
+                    "$ref": "#/components/schemas/CourierGetDto"
                   }
                 }
               }
@@ -477,23 +477,23 @@
       },
       "post": {
         "tags": [
-          "couriers"
+          "Couriers"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/courierPostDto"
+                "$ref": "#/components/schemas/CourierPostDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/courierPostDto"
+                "$ref": "#/components/schemas/CourierPostDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/courierPostDto"
+                "$ref": "#/components/schemas/CourierPostDto"
               }
             }
           }
@@ -504,17 +504,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/courierGetDto"
+                  "$ref": "#/components/schemas/CourierGetDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/courierGetDto"
+                  "$ref": "#/components/schemas/CourierGetDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/courierGetDto"
+                  "$ref": "#/components/schemas/CourierGetDto"
                 }
               }
             }
@@ -522,10 +522,10 @@
         }
       }
     },
-    "/api/couriers/{id}": {
+    "/api/Couriers/{id}": {
       "get": {
         "tags": [
-          "couriers"
+          "Couriers"
         ],
         "parameters": [
           {
@@ -544,17 +544,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/courierGetDto"
+                  "$ref": "#/components/schemas/CourierGetDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/courierGetDto"
+                  "$ref": "#/components/schemas/CourierGetDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/courierGetDto"
+                  "$ref": "#/components/schemas/CourierGetDto"
                 }
               }
             }
@@ -563,7 +563,7 @@
       },
       "put": {
         "tags": [
-          "couriers"
+          "Couriers"
         ],
         "parameters": [
           {
@@ -580,17 +580,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/courierPostDto"
+                "$ref": "#/components/schemas/CourierPostDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/courierPostDto"
+                "$ref": "#/components/schemas/CourierPostDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/courierPostDto"
+                "$ref": "#/components/schemas/CourierPostDto"
               }
             }
           }
@@ -603,7 +603,7 @@
       },
       "delete": {
         "tags": [
-          "couriers"
+          "Couriers"
         ],
         "parameters": [
           {
@@ -821,7 +821,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/shopGetDto"
+                    "$ref": "#/components/schemas/ShopGetDto"
                   }
                 }
               },
@@ -829,7 +829,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/shopGetDto"
+                    "$ref": "#/components/schemas/ShopGetDto"
                   }
                 }
               },
@@ -837,7 +837,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/shopGetDto"
+                    "$ref": "#/components/schemas/ShopGetDto"
                   }
                 }
               }
@@ -853,17 +853,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/shopPostDto"
+                "$ref": "#/components/schemas/ShopPostDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/shopPostDto"
+                "$ref": "#/components/schemas/ShopPostDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/shopPostDto"
+                "$ref": "#/components/schemas/ShopPostDto"
               }
             }
           }
@@ -874,17 +874,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/shopGetDto"
+                  "$ref": "#/components/schemas/ShopGetDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/shopGetDto"
+                  "$ref": "#/components/schemas/ShopGetDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/shopGetDto"
+                  "$ref": "#/components/schemas/ShopGetDto"
                 }
               }
             }
@@ -914,17 +914,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/shopGetDto"
+                  "$ref": "#/components/schemas/ShopGetDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/shopGetDto"
+                  "$ref": "#/components/schemas/ShopGetDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/shopGetDto"
+                  "$ref": "#/components/schemas/ShopGetDto"
                 }
               }
             }
@@ -950,17 +950,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/shopPostDto"
+                "$ref": "#/components/schemas/ShopPostDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/shopPostDto"
+                "$ref": "#/components/schemas/ShopPostDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/shopPostDto"
+                "$ref": "#/components/schemas/ShopPostDto"
               }
             }
           }
@@ -1181,6 +1181,86 @@
   },
   "components": {
     "schemas": {
+      "ClientGetDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fio": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ClientPostDto": {
+        "type": "object",
+        "properties": {
+          "fio": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CourierGetDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fio": {
+            "type": "string",
+            "nullable": true
+          },
+          "telephone": {
+            "type": "string",
+            "nullable": true
+          },
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CourierPostDto": {
+        "type": "object",
+        "properties": {
+          "fio": {
+            "type": "string",
+            "nullable": true
+          },
+          "telephone": {
+            "type": "string",
+            "nullable": true
+          },
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "ProductType": {
         "type": "object",
         "properties": {
@@ -1195,6 +1275,86 @@
         },
         "additionalProperties": false
       },
+      "ShopGetDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "courierId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateTimeOrder": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateTimeDelivery": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateTimeDeliveryActual": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orderNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ShopPostDto": {
+        "type": "object",
+        "properties": {
+          "courierId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateTimeOrder": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateTimeDelivery": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateTimeDeliveryActual": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "orderNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "TSGetDto": {
         "type": "object",
         "properties": {
@@ -1202,7 +1362,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "car_number": {
+          "carNumber": {
             "type": "integer",
             "format": "int32"
           },
@@ -1220,7 +1380,7 @@
       "TSPostDto": {
         "type": "object",
         "properties": {
-          "car_number": {
+          "carNumber": {
             "type": "integer",
             "format": "int32"
           },
@@ -1258,19 +1418,19 @@
             "type": "integer",
             "format": "int32"
           },
-          "date_time_order": {
+          "dateTimeOrder": {
             "type": "string",
             "format": "date-time"
           },
-          "date_time_delivery": {
+          "dateTimeDelivery": {
             "type": "string",
             "format": "date-time"
           },
-          "date_time_delivery_actual": {
+          "dateTimeDeliveryActual": {
             "type": "string",
             "format": "date-time"
           },
-          "order_number": {
+          "orderNumber": {
             "type": "integer",
             "format": "int32"
           },
@@ -1340,173 +1500,13 @@
             "type": "integer",
             "format": "int32"
           },
-          "date_time_delivery": {
+          "dateTimeDelivery": {
             "type": "string",
             "format": "date-time"
           },
-          "date_time_delivery_actual": {
+          "dateTimeDeliveryActual": {
             "type": "string",
             "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
-      "clientGetDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fio": {
-            "type": "string",
-            "nullable": true
-          },
-          "address": {
-            "type": "string",
-            "nullable": true
-          },
-          "phone_number": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "clientPostDto": {
-        "type": "object",
-        "properties": {
-          "fio": {
-            "type": "string",
-            "nullable": true
-          },
-          "address": {
-            "type": "string",
-            "nullable": true
-          },
-          "phone_number": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "courierGetDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "fio": {
-            "type": "string",
-            "nullable": true
-          },
-          "telephone": {
-            "type": "string",
-            "nullable": true
-          },
-          "carId": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "courierPostDto": {
-        "type": "object",
-        "properties": {
-          "fio": {
-            "type": "string",
-            "nullable": true
-          },
-          "telephone": {
-            "type": "string",
-            "nullable": true
-          },
-          "carId": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "shopGetDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "courierId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "clientId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "date_time_order": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "date_time_delivery": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "date_time_delivery_actual": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "order_number": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "status": {
-            "type": "string",
-            "nullable": true
-          },
-          "typeId": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "shopPostDto": {
-        "type": "object",
-        "properties": {
-          "courierId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "clientId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "date_time_order": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "date_time_delivery": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "date_time_delivery_actual": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "order_number": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "status": {
-            "type": "string",
-            "nullable": true
-          },
-          "typeId": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

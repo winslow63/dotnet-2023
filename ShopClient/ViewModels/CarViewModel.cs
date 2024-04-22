@@ -1,6 +1,11 @@
 ﻿using ReactiveUI;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Reactive;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ShopClient.ViewModels;
 public class СarViewModel : ViewModelBase
@@ -14,7 +19,7 @@ public class СarViewModel : ViewModelBase
 
     private int _carNumber;
     [Required]
-    public int carNumber
+    public int CarNumber
     {
         get => _carNumber;
         set => this.RaiseAndSetIfChanged(ref _carNumber, value);
@@ -22,7 +27,7 @@ public class СarViewModel : ViewModelBase
 
     private string _model = string.Empty;
     [Required]
-    public string model
+    public string Model
     {
         get => _model;
         set => this.RaiseAndSetIfChanged(ref _model, value);
@@ -30,7 +35,7 @@ public class СarViewModel : ViewModelBase
 
     private int _typeId;
     [Required]
-    public int typeId
+    public int TypeId
     {
         get => _typeId;
         set => this.RaiseAndSetIfChanged(ref _typeId, value);
@@ -43,4 +48,3 @@ public class СarViewModel : ViewModelBase
     }
 
 }
-

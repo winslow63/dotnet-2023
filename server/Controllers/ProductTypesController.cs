@@ -9,10 +9,10 @@ namespace server.Controllers;
 [ApiController]
 public class ProductTypesController : ControllerBase
 {
-    private readonly shopProgramDbContext _context;
+    private readonly ShopProgramDbContext _context;
     private readonly IMapper _mapper;
 
-    public ProductTypesController(shopProgramDbContext context, IMapper mapper)
+    public ProductTypesController(ShopProgramDbContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;

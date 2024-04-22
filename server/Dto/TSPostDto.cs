@@ -2,8 +2,8 @@
 
 public class TSPostDto
 {
-    public int car_number { get; set; }
-    public string model { get; set; } = string.Empty;
-    public int typeId { get; set; }
+    public int CarNumber { get; set; }
+    public string Model { get; set; } = string.Empty;
+    public int TypeId { get; set; }
 }
 

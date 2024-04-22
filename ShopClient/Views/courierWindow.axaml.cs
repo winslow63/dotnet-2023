@@ -1,22 +1,21 @@
+using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.ReactiveUI;
 using ReactiveUI;
 using ShopClient.ViewModels;
 using System;
 
-namespace ShopClient.Views
+namespace ShopClient.Views;
+public partial class CourierWindow : ReactiveWindow<ÑourierViewModel>
 {
-    public partial class CourierWindow : ReactiveWindow<ÑourierViewModel>
+    public CourierWindow()
     {
-        public CourierWindow()
-        {
-            InitializeComponent();
-            this.WhenActivated(d => d(ViewModel!.OnSubmitCourierCommand.Subscribe(Close)));
-        }
+        InitializeComponent();
+        this.WhenActivated(d => d(ViewModel!.OnSubmitCourierCommand.Subscribe(Close)));
+    }
 
-        public void CancelButton_OnClick(object? sender, RoutedEventArgs e)
-        {
-            Close();
-        }
+    public void CancelButton_OnClick(object? sender, RoutedEventArgs e)
+    {
+        Close();
     }
 }

@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <OpenApiReference Include="swagger.json" CodeGenerator="NSwagCSharp" ClassName="ApiClient" />
+    <OpenApiReference Include="swagger.json" ClassName="ApiClient" CodeGenerator="NSwagCSharp" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,13 +34,13 @@
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10" />
+    <PackageReference Include="editorconfig" Version="0.15.0" />
     <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="7.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
@@ -51,23 +51,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\carWindow.axaml.cs">
-      <DependentUpon>carWindow.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\clientWindow.axaml.cs">
-      <DependentUpon>clientWindow.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\courierWindow.axaml.cs">
-      <DependentUpon>courierWindow.axaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\shopWindow.axaml.cs">
-      <DependentUpon>shopWindow.axaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="appsettings.json">
+    <AvaloniaXaml Update="Styles.axaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </AvaloniaXaml>
   </ItemGroup>
 </Project>

@@ -10,10 +10,10 @@ namespace server.Controllers;
 [ApiController]
 public class TSsController : ControllerBase
 {
-    private readonly shopProgramDbContext _context;
+    private readonly ShopProgramDbContext _context;
     private readonly IMapper _mapper;
 
-    public TSsController(shopProgramDbContext context, IMapper mapper)
+    public TSsController(ShopProgramDbContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
@@ -55,12 +55,12 @@ public class TSsController : ControllerBase
         {
             return NotFound();
         }
-        var TSToModify = await _context.TS.FindAsync(id);
-        if (TSToModify == null)
+        var tsoModify = await _context.TS.FindAsync(id);
+        if (tsoModify == null)
         {
             return NotFound();
         }
-        _mapper.Map(tS, TSToModify);
+        _mapper.Map(tS, tsoModify);
 
         //_context.Entry(shop).State = EntityState.Modified;
 

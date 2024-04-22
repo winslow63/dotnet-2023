@@ -1,27 +1,27 @@
-﻿public class courier
+﻿public class Courier
 {
     public int Id { get; set; }
     public string FIO { get; set; } = string.Empty;
-    public string telephone { get; set; } = string.Empty;
-    public int carId { get; set; }
+    public string Telephone { get; set; } = string.Empty;
+    public int CarId { get; set; }
 
-    public courier() { }
-    public courier(int id, string FIO, string telephone, int car)
+    public Courier() { }
+    public Courier(int id, string fio, string telephone, int car)
     {
         Id = id;
-        this.FIO = FIO;
-        this.telephone = telephone;
-        this.carId = car;
+        this.FIO = fio;
+        this.Telephone = telephone;
+        this.CarId = car;
     }
     public override bool Equals(object? obj)
     {
-        if (obj is not courier param)
+        if (obj is not Courier param)
             return false;
 
         return Id == param.Id &&
                FIO == param.FIO &&
-               telephone == param.telephone &&
-               carId == param.carId;
+               Telephone == param.Telephone &&
+               CarId == param.CarId;
     }
     public override int GetHashCode()
     {

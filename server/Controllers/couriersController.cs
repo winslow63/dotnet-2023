@@ -8,12 +8,12 @@ namespace server.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class couriersController : ControllerBase
+public class CouriersController : ControllerBase
 {
-    private readonly shopProgramDbContext _context;
+    private readonly ShopProgramDbContext _context;
     private readonly IMapper _mapper;
 
-    public couriersController(shopProgramDbContext context, IMapper mapper)
+    public CouriersController(ShopProgramDbContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
@@ -21,42 +21,42 @@ public class couriersController : ControllerBase
 
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<courierGetDto>>> Getcourier()
+    public async Task<ActionResult<IEnumerable<CourierGetDto>>> Getcourier()
     {
-        if (_context.courier == null)
+        if (_context.Courier == null)
         {
             return NotFound();
         }
-        return await _mapper.ProjectTo<courierGetDto>(_context.courier).ToListAsync();
+        return await _mapper.ProjectTo<CourierGetDto>(_context.Courier).ToListAsync();
     }
 
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<courierGetDto>> Getcourier(int id)
+    public async Task<ActionResult<CourierGetDto>> Getcourier(int id)
     {
-        if (_context.courier == null)
+        if (_context.Courier == null)
         {
             return NotFound();
         }
-        var courier = await _context.courier.FindAsync(id);
+        var courier = await _context.Courier.FindAsync(id);
 
         if (courier == null)
         {
             return NotFound();
         }
 
-        return _mapper.Map<courierGetDto>(courier);
+        return _mapper.Map<CourierGetDto>(courier);
     }
 
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Putcourier(int id, courierPostDto courier)
+    public async Task<IActionResult> Putcourier(int id, CourierPostDto courier)
     {
-        if (_context.courier == null)
+        if (_context.Courier == null)
         {
             return NotFound();
         }
-        var courierToModify = await _context.courier.FindAsync(id);
+        var courierToModify = await _context.Courier.FindAsync(id);
         if (courierToModify == null)
         {
             return NotFound();
@@ -72,34 +72,34 @@ public class couriersController : ControllerBase
 
 
     [HttpPost]
-    public async Task<ActionResult<courierGetDto>> Postcourier(courierPostDto courier)
+    public async Task<ActionResult<CourierGetDto>> Postcourier(CourierPostDto courier)
     {
-        if (_context.courier == null)
+        if (_context.Courier == null)
         {
             return Problem("Entity set 'shopProgramDbContext.courier'  is null.");
         }
-        var mapperCourier = _mapper.Map<courier>(courier);
-        _context.courier.Add(mapperCourier);
+        var mapperCourier = _mapper.Map<Courier>(courier);
+        _context.Courier.Add(mapperCourier);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction("Getcourier", new { id = mapperCourier.Id }, _mapper.Map<courierGetDto>(mapperCourier));
+        return CreatedAtAction("Getcourier", new { id = mapperCourier.Id }, _mapper.Map<CourierGetDto>(mapperCourier));
     }
 
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Deletecourier(int id)
     {
-        if (_context.courier == null)
+        if (_context.Courier == null)
         {
             return NotFound();
         }
-        var courier = await _context.courier.FindAsync(id);
+        var courier = await _context.Courier.FindAsync(id);
         if (courier == null)
         {
             return NotFound();
         }
 
-        _context.courier.Remove(courier);
+        _context.Courier.Remove(courier);
         await _context.SaveChangesAsync();
 
         return NoContent();

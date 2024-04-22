@@ -1,20 +1,19 @@
-﻿namespace server.Dto
+﻿namespace server.Dto;
+
+public class Test3Dto
 {
-    public class Test3Dto
-    {
 
-        public int Id { get; set; }
-        public int courierId { get; set; }
-        public string FIO { get; set; } = string.Empty;
-        public string telephone { get; set; } = string.Empty;
-        public int carId { get; set; }
-        public DateTime date_time_order { get; set; } = DateTime.MinValue;
-        public DateTime date_time_delivery { get; set; } = DateTime.MinValue;
-        public DateTime date_time_delivery_actual { get; set; } = DateTime.MinValue;
-        public int order_number { get; set; }
-        public string status { get; set; } = string.Empty;
-        public int typeId { get; set; }
+    public int Id { get; set; }
+    public int CourierId { get; set; }
+    public string FIO { get; set; } = string.Empty;
+    public string Telephone { get; set; } = string.Empty;
+    public int CarId { get; set; }
+    public DateTime DateTimeOrder { get; set; } = DateTime.MinValue;
+    public DateTime DateTimeDelivery { get; set; } = DateTime.MinValue;
+    public DateTime DateTimeDeliveryActual { get; set; } = DateTime.MinValue;
+    public int OrderNumber { get; set; }
+    public string Status { get; set; } = string.Empty;
+    public int TypeId { get; set; }
 
-    }
 }
 

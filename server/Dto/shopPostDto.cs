@@ -1,14 +1,14 @@
 ﻿namespace server.Dto;
 
-public class shopPostDto
+public class ShopPostDto
 {
-    public int courierId { get; set; }
-    public int clientId { get; set; }
-    public DateTime date_time_order { get; set; } = DateTime.MinValue;
-    public DateTime date_time_delivery { get; set; } = DateTime.MinValue;
-    public DateTime date_time_delivery_actual { get; set; } = DateTime.MinValue;
-    public int order_number { get; set; }
-    public string status { get; set; } = string.Empty;
-    public int typeId { get; set; }
+    public int CourierId { get; set; }
+    public int ClientId { get; set; }
+    public DateTime DateTimeOrder { get; set; } = DateTime.MinValue;
+    public DateTime DateTimeDelivery { get; set; } = DateTime.MinValue;
+    public DateTime DateTimeDeliveryActual { get; set; } = DateTime.MinValue;
+    public int OrderNumber { get; set; }
+    public string Status { get; set; } = string.Empty;
+    public int TypeId { get; set; }
 }
 

@@ -8,12 +8,12 @@ namespace server.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class clientsController : ControllerBase
+public class ClientsController : ControllerBase
 {
-    private readonly shopProgramDbContext _context;
+    private readonly ShopProgramDbContext _context;
     private readonly IMapper _mapper;
 
-    public clientsController(shopProgramDbContext context, IMapper mapper)
+    public ClientsController(ShopProgramDbContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
@@ -21,42 +21,42 @@ public class clientsController : ControllerBase
 
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<clientGetDto>>> Getclient()
+    public async Task<ActionResult<IEnumerable<ClientGetDto>>> Getclient()
     {
-        if (_context.client == null)
+        if (_context.Client == null)
         {
             return NotFound();
         }
-        return await _mapper.ProjectTo<clientGetDto>(_context.client).ToListAsync();
+        return await _mapper.ProjectTo<ClientGetDto>(_context.Client).ToListAsync();
     }
 
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<clientGetDto>> Getclient(int id)
+    public async Task<ActionResult<ClientGetDto>> Getclient(int id)
     {
-        if (_context.client == null)
+        if (_context.Client == null)
         {
             return NotFound();
         }
-        var client = await _context.client.FindAsync(id);
+        var client = await _context.Client.FindAsync(id);
 
         if (client == null)
         {
             return NotFound();
         }
 
-        return _mapper.Map<clientGetDto>(client);
+        return _mapper.Map<ClientGetDto>(client);
     }
 
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Putclient(int id, clientPostDto client)
+    public async Task<IActionResult> Putclient(int id, ClientPostDto client)
     {
-        if (_context.client == null)
+        if (_context.Client == null)
         {
             return NotFound();
         }
-        var clientToModify = await _context.client.FindAsync(id);
+        var clientToModify = await _context.Client.FindAsync(id);
         if (clientToModify == null)
         {
             return NotFound();
@@ -74,34 +74,34 @@ public class clientsController : ControllerBase
 
     [HttpPost]
     [ProducesResponseType(201)]
-    public async Task<ActionResult<clientGetDto>> Postclient(clientPostDto client)
+    public async Task<ActionResult<ClientGetDto>> Postclient(ClientPostDto client)
     {
-        if (_context.client == null)
+        if (_context.Client == null)
         {
             return Problem("Entity set 'shopProgramDbContext.client'  is null.");
         }
-        var mapperClient = _mapper.Map<client>(client);
-        _context.client.Add(mapperClient);
+        var mapperClient = _mapper.Map<Client>(client);
+        _context.Client.Add(mapperClient);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction("Getclient", new { id = mapperClient.Id }, _mapper.Map<clientGetDto>(mapperClient));
+        return CreatedAtAction("Getclient", new { id = mapperClient.Id }, _mapper.Map<ClientGetDto>(mapperClient));
     }
 
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Deleteclient(int id)
     {
-        if (_context.client == null)
+        if (_context.Client == null)
         {
             return NotFound();
         }
-        var client = await _context.client.FindAsync(id);
+        var client = await _context.Client.FindAsync(id);
         if (client == null)
         {
             return NotFound();
         }
 
-        _context.client.Remove(client);
+        _context.Client.Remove(client);
         await _context.SaveChangesAsync();
 
         return NoContent();

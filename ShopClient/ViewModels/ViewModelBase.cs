@@ -1,8 +1,6 @@
 ﻿using ReactiveUI;
 
-namespace ShopClient.ViewModels
+namespace ShopClient.ViewModels;
+public class ViewModelBase : ReactiveObject
 {
-    public class ViewModelBase : ReactiveObject
-    {
-    }
 }

@@ -2,13 +2,13 @@
 public class ProductType
 {
     public int Id { get; set; }
-    public string type { get; set; } = string.Empty;
+    public string Type { get; set; } = string.Empty;
     public ProductType() { }
 
     public ProductType(int id, string type)
     {
         Id = id;
-        this.type = type;
+        this.Type = type;
     }
     public override bool Equals(object? obj)
     {
@@ -16,7 +16,7 @@ public class ProductType
             return false;
 
         return Id == param.Id &&
-               type == param.type;
+               Type == param.Type;
     }
     public override int GetHashCode()
     {

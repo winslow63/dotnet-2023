@@ -3,26 +3,26 @@
 public class Shop
 {
     public int Id { get; set; }
-    public int courierId { get; set; }
-    public int clientId { get; set; }
-    public DateTime date_time_order { get; set; }
-    public DateTime date_time_delivery { get; set; }
-    public DateTime date_time_delivery_actual { get; set; }
-    public int order_number { get; set; }
-    public string status { get; set; } = string.Empty;
-    public int typeId { get; set; }
+    public int CourierId { get; set; }
+    public int ClientId { get; set; }
+    public DateTime DateTimeOrder { get; set; }
+    public DateTime DateTimeDelivery { get; set; }
+    public DateTime DateTimeDeliveryActual { get; set; }
+    public int OrderNumber { get; set; }
+    public string Status { get; set; } = string.Empty;
+    public int TypeId { get; set; }
     public Shop() { }
-    public Shop(int id, int couriers, int clients, DateTime date_time_orders, DateTime date_time_deliverys, DateTime date_time_delivery_actuals, int order_numbers, string statuss, int types)
+    public Shop(int id, int courier, int client, DateTime dateTimeOrder, DateTime dateTimeDelivery, DateTime dateTimeDeliveryActual, int orderNumber, string status, int type)
     {
         Id = id;
-        this.courierId = couriers;
-        this.clientId = clients;
-        this.date_time_order = date_time_orders;
-        this.date_time_delivery = date_time_deliverys;
-        this.date_time_delivery_actual = date_time_delivery_actuals;
-        this.order_number = order_numbers;
-        this.status = statuss;
-        this.typeId = types;
+        this.CourierId = courier;
+        this.ClientId = client;
+        this.DateTimeOrder = dateTimeOrder;
+        this.DateTimeDelivery = dateTimeDelivery;
+        this.DateTimeDeliveryActual = dateTimeDeliveryActual;
+        this.OrderNumber = orderNumber;
+        this.Status = status;
+        this.TypeId = type;
 
     }
     public override bool Equals(object? obj)
@@ -31,14 +31,14 @@ public class Shop
             return false;
 
         return Id == param.Id &&
-               courierId == param.courierId &&
-               clientId == param.clientId &&
-               date_time_order == param.date_time_order &&
-               date_time_delivery == param.date_time_delivery &&
-               date_time_delivery_actual == param.date_time_delivery_actual &&
-               order_number == param.order_number &&
-               status == param.status &&
-               typeId == param.typeId;
+               CourierId == param.CourierId &&
+               ClientId == param.ClientId &&
+               DateTimeOrder == param.DateTimeOrder &&
+               DateTimeDelivery == param.DateTimeDelivery &&
+               DateTimeDeliveryActual == param.DateTimeDeliveryActual &&
+               OrderNumber == param.OrderNumber &&
+               Status == param.Status &&
+               TypeId == param.TypeId;
     }
     public override int GetHashCode()
     {

@@ -6,7 +6,6 @@ using System.Reactive;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 
-
 namespace ShopClient.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
@@ -164,7 +163,7 @@ public class MainWindowViewModel : ViewModelBase
             var shopViewModel = await ShowShopDialog.Handle(SelectedShop!);
             if (shopViewModel != null)
             {
-                await _apiClient.UpdateCourierAsync(SelectedShop.Id, _mapper.Map<ShopPostDto>(shopViewModel));
+                await _apiClient.UpdateShopAsync(SelectedShop.Id, _mapper.Map<ShopPostDto>(shopViewModel));
                 _mapper.Map(shopViewModel, SelectedShop);
             }
         }, this.WhenAnyValue(vm => vm.SelectedShop).Select(selectedShop => selectedShop != null));
@@ -237,4 +236,3 @@ public class MainWindowViewModel : ViewModelBase
 
 
 }
-
